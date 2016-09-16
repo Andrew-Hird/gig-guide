@@ -121,7 +121,7 @@ exports.seed = function (knex, Promise) {
         venue_id: '88802',
         band_id: '99901',
         date: '2016-09-28',
-        description: 'Come see Shihad play!'
+        description: 'Come see Split Enz again!!'
       })
     })
 }
