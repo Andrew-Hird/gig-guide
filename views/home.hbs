@@ -2,9 +2,15 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Gig Guide</title>
   </head>
   <body>
-<h1>Hello</h1>
+    <h1>What's On?</h1>
+    <a href="#"><button>gigs by venue</button></a>
+    <a href="#"><button>gigs by band</button></a>
+    <h2>Coming Soon:</h2>
+    {{#each gigs}}
+    <li><a href="/gig/{{gigID}}">see more</a> {{date}} {{bandName}} {{venueName}}</li>
+    {{/each}}
   </body>
 </html>

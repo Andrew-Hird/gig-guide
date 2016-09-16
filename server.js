@@ -14,7 +14,8 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(bodyParser.urlencoded({ extended: true}))
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/', routes.get)
+app.get('/', routes.getGigs)
+app.get('/gig/:gigID', routes.gigInfo)
 
 app.listen(PORT, function () {
   console.log('Listening on port', PORT)
