@@ -6,8 +6,8 @@
   </head>
   <body>
     <h1>What's On?</h1>
-    <a href="#"><button>gigs by venue</button></a>
-    <a href="#"><button>gigs by band</button></a>
+    <a href="/venue"><button>gigs by venue</button></a>
+    <a href="/band"><button>gigs by band</button></a>
     <h2>Coming Soon:</h2>
     {{#each gigs}}
     <li><a href="/gig/{{gigID}}">see more</a> {{date}} {{bandName}} {{venueName}}</li>

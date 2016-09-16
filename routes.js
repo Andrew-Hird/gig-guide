@@ -2,7 +2,11 @@ var db = require('./db.js')
 
 module.exports = {
   getGigs: getGigs,
-  gigInfo: gigInfo
+  gigInfo: gigInfo,
+  venueInfo: venueInfo,
+  venueDeets: venueDeets,
+  venueBand: venueBand,
+  bandDeets: bandDeets
 }
 
 function getGigs(req, res) {
@@ -30,4 +34,58 @@ function gigInfo(req, res) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
   // res.send('hello')
+}
+
+function venueInfo(req, res) {
+  db.getGigs()
+  .then(function (gigs) {
+    vm = {
+      gigs: gigs
+    }
+    res.render('venues', vm)
+  })
+  .catch(function (err) {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
+}
+
+function venueDeets(req, res) {
+  db.deetsInfo(req.params)
+  .then(function (gigs) {
+    vm = {
+      gig: gigs[0],
+      gigs: gigs
+    }
+    res.render('deets', vm)
+  })
+  .catch(function (err) {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
+}
+
+function venueBand(req, res) {
+  db.getGigs(req.params)
+  .then(function (gigs) {
+    vm = {
+      gigs: gigs
+    }
+    res.render('band', vm)
+  })
+  .catch(function (err) {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
+}
+
+function bandDeets(req, res) {
+  db.deetsBandInfo(req.params)
+  .then(function (gigs) {
+    vm = {
+      gig: gigs[0],
+      gigs: gigs
+    }
+    res.render('bandDeets', vm)
+  })
+  .catch(function (err) {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
 }

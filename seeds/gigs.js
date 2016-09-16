@@ -37,7 +37,7 @@ exports.seed = function (knex, Promise) {
         venue_id: '88804'
       })
     })
-    
+
     .then(function () {
       return knex('venues').insert({
         id: '88801',
@@ -111,6 +111,15 @@ exports.seed = function (knex, Promise) {
         id: '77704',
         venue_id: '88804',
         band_id: '99904',
+        date: '2016-09-28',
+        description: 'Come see Shihad play!'
+      })
+    })
+    .then(function () {
+      return knex('gigs').insert({
+        id: '77705',
+        venue_id: '88802',
+        band_id: '99901',
         date: '2016-09-28',
         description: 'Come see Shihad play!'
       })

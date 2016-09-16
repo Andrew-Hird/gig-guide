@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bands</title>
+  </head>
+  <body>
+    <h1>{{gig.bandName}}</h1>
+    <h2>Playing at:</h2>
+    {{#each gigs}}
+    {{venueName}}
+    {{/each}}
+    <br>
+    <a href="/band"><button>back</button></a>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bands</title>
+  </head>
+  <body>
+    <h1>Gigs by Band</h1>
+    {{#each gigs}}
+    <a href="/band/{{bandID}}">{{bandName}}</a>
+    <br>
+    {{/each}}
+    <br>
+    <a href="/"><button>back</button></a>
+  </body>
+</html>

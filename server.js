@@ -16,6 +16,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', routes.getGigs)
 app.get('/gig/:gigID', routes.gigInfo)
+app.get('/venue', routes.venueInfo)
+app.get('/venue/:venueID', routes.venueDeets)
+app.get('/band/', routes.venueBand)
+app.get('/band/:bandID', routes.bandDeets)
+
 
 app.listen(PORT, function () {
   console.log('Listening on port', PORT)
