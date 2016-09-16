@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/main.css">
   </head>
   <body>
+    <div>
     <h1>Gigs by Band</h1>
     {{#each bands}}
     <a href="/band/{{id}}">{{name}}</a>
@@ -13,5 +14,6 @@
     {{/each}}
     <br>
     <a href="/"><button>back</button></a>
+  </div>
   </body>
 </html>

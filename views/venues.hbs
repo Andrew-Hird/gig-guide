@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Venues</title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
   </head>
   <body>
+    <div>
     <h1>Gigs by venue</h1>
     {{#each venues}}
     <li><a href="/venue/{{id}}"> {{name}} </a> </li>
     {{/each}}
     <a href="/"><button>back</button></a>
+  </div>
   </body>
 </html>

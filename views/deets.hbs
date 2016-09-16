@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>venue</title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
   </head>
   <body>
+    <div>
     <h1>{{gig.venueName}}</h1>
     <h2>Bands playing:</h2>
     {{#each gigs}}
@@ -13,5 +15,6 @@
     {{/each}}
     <br>
     <a href="/venue"><button>back</button></a>
+  </div>
   </body>
 </html>

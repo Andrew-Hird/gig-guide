@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Gig Guide</title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
   </head>
   <body>
+    <div>
     <h1>What's On?</h1>
     <a href="/venue"><button>gigs by venue</button></a>
     <a href="/band"><button>gigs by band</button></a>
@@ -12,5 +14,6 @@
     {{#each gigs}}
     <li><a href="/gig/{{gigID}}">{{date}} {{bandName}} {{venueName}}</a> </li>
     {{/each}}
+  </div>
   </body>
 </html>
