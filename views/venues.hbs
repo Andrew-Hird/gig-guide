@@ -6,8 +6,8 @@
   </head>
   <body>
     <h1>Gigs by venue</h1>
-    {{#each gigs}}
-    <li><a href="/venue/{{venueID}}"> {{venueName}} </a> </li>
+    {{#each venues}}
+    <li><a href="/venue/{{id}}"> {{name}} </a> </li>
     {{/each}}
     <a href="/"><button>back</button></a>
   </body>

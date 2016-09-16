@@ -33,14 +33,13 @@ function gigInfo(req, res) {
     .catch(function (err) {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
-  // res.send('hello')
 }
 
 function venueInfo(req, res) {
-  db.getGigs()
-  .then(function (gigs) {
+  db.getVenues()
+  .then(function (venues) {
     vm = {
-      gigs: gigs
+      venues: venues
     }
     res.render('venues', vm)
   })
@@ -64,10 +63,10 @@ function venueDeets(req, res) {
 }
 
 function venueBand(req, res) {
-  db.getGigs(req.params)
-  .then(function (gigs) {
+  db.getBands()
+  .then(function (bands) {
     vm = {
-      gigs: gigs
+      bands: bands
     }
     res.render('band', vm)
   })

@@ -6,7 +6,9 @@ module.exports = {
   gigInfo: gigInfo,
   deetsInfo: deetsInfo,
   venueBand:venueBand,
-  deetsBandInfo: deetsBandInfo
+  deetsBandInfo: deetsBandInfo,
+  getVenues: getVenues,
+  getBands: getBands
 }
 
 function getGigs () {
@@ -14,6 +16,13 @@ function getGigs () {
   .join('bands', 'bands.id', '=', 'gigs.band_id')
   .join('venues', 'venues.id', '=', 'gigs.venue_id')
   .select('gigs.id as gigID', 'gigs.date as date', 'bands.name as bandName', 'venues.name as venueName' ,'venues.id as venueID', 'bands.id as bandID')
+}
+
+function getVenues (gig) {
+  return knex('venues')
+}
+function getBands (gig) {
+  return knex('bands')
 }
 
 function gigInfo (gig) {

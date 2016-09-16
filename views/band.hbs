@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Bands</title>
+    <link rel="stylesheet" type="text/css" href="/main.css">
   </head>
   <body>
     <h1>Gigs by Band</h1>
-    {{#each gigs}}
-    <a href="/band/{{bandID}}">{{bandName}}</a>
+    {{#each bands}}
+    <a href="/band/{{id}}">{{name}}</a>
     <br>
     {{/each}}
     <br>
