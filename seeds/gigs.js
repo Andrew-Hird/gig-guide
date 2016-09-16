@@ -124,4 +124,35 @@ exports.seed = function (knex, Promise) {
         description: 'Come see Split Enz again!!'
       })
     })
+
+    .then(function () {
+      return knex('gigs').insert({
+        id: '77706',
+        venue_id: '88803',
+        band_id: '99902',
+        date: '2016-11-28',
+        description: 'Dragon rocks again!!'
+      })
+    })
+
+    .then(function () {
+      return knex('gigs').insert({
+        id: '77707',
+        venue_id: '88804',
+        band_id: '99903',
+        date: '2016-12-28',
+        description: 'Blindspot is cool!!'
+      })
+    })
+
+    .then(function () {
+      return knex('gigs').insert({
+        id: '77708',
+        venue_id: '88805',
+        band_id: '99904',
+        date: '2016-12-03',
+        description: 'Shihad is the shizz!!'
+      })
+    })
+
 }
